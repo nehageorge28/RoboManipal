@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<robot name = "mrm" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<link name="base_link"> 
+	<visual>
+		<origin rpy="0 0 0" xyz="0 0 0"/>
+		<geometry>
+		<box size ="1 1 0.01" />
+	</geometry>
+</visual>
+</link>
+<joint name="baselink__link_01" type="revolute">
+	<axis xyz="0 1 0"/>
+	<limit effort ="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
+		<origin rpy= "0 0 0" xyz="0.5 0.5 0.005"/>
+		<parent link="base_link"/>
+		<child link="link_01"/>
+	</joint>
+
+	<link name="link_01">
+		<visual>
+			<origin rpy="0 0 0" xyz = "0 0 -0.3"/>
+			<geometry>
+				<cylinder radius="0.05" length="0.6"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="link_01__link_02" type="revolute">
+	<axis xyz="0 1 0"/>
+	<limit effort ="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
+		<origin rpy= "0 0 0" xyz="0 0 -0.6"/>
+		<parent link="link_01"/>
+		<child link="link_02"/>
+	</joint>
+
+	<link name="link_02">
+		<visual>
+			<origin rpy="0 0 0" xyz = "0 0 -0.3"/>
+			<geometry>
+				<cylinder radius="0.05" length="0.6"/>
+			</geometry>
+		</visual>
+	</link>
+	
+	</robot> 
+
+
+
+
+
