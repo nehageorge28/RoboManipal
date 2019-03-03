@@ -1,20 +1,18 @@
 ##########################################
-#SYNTAX COLOURING MAP FOR RHINO
+#SYNTAX COLOURING MAP FOR ENCODER
 ##########################################
 #DATATYPES (KEYWORD1)
 ##########################################
 
-Rhino KEYWORD1
-
+Encoder KEYWORD1
+ref     KEYWORD1
+virPos  KEYWORD1
 ##########################################
 #Methods and funtctions(KEYWORD2)
 
 ##########################################
 
-rotate()	KEYWORD2
-stopMotor()	KEYWORD2
 gotoPos()	KEYWORD2
-setI2CAddr()	KEYWORD2
-setSpeed()	KEYWORD2
-setI2CAddr()	KEYWORD2
-getI2CAddr()	KEYWORD2
+reset() 	KEYWORD2
+isr()	        KEYWORD2
+goToAngle()	KEYWORD2

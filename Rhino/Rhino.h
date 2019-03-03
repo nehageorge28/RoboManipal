@@ -13,9 +13,9 @@ class Rhino
  
  
  
- void rotate(int speed);
- void gotoPos(int pos);
- void setI2CAddr(int addr);
+ void rotate();
+ void gotoPos();
+ void setI2CAddr();
 
  
  int getI2CAddr();

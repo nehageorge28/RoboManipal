@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<<<<<<< HEAD
+<robot name= "mesh_basic" xmlns:xacro = "http://www.ros.org/wiki/xacro">
+	<link name="base_link">
+		<visual>
+			<origin rpy= "1.57070 0 0" xyz= "0 0 0"/>
+			<geometry>
+				<mesh filename="package://auto_bot/meshes/frame.stl" scale ="1 1 1"/>
+=======
+<robot name= "mrm" xmlns :xacro = "http://www.ros.org/wiki/xacro">
+	<link name="base">
+		<visual>
+			<origin rpy= "1.57070 0 0" xyz= "0 0 0"/>
+			<geometry>
+				<mesh filename="package://autobot/meshes/frame.stl" scale ="1 1 1"/>
+>>>>>>> df5380680304370108603d6ac00163c245728048
+			</geometry>
+								<material name="gold">
+					
+				</material>
+			</visual>
+			<inertial>
+				<mass value="1"/>
+				<origin rpy="1.57070 0 0" xyz="0 0 0"/>
+				<inertia ixx="1" ixy="1" ixz="1" iyy="1" iyz="1" izz="1"/>
+			</inertial>
+		</link>
+		<joint name="hip_joint" type="revolute">
+			<axis xyz="1 0 0"/>
+			<limit effort ="1000.0" upper="3.14" lower="-3.14" velocity="0.5"/>
+			<origin rpy="0 0 0" xyz= "0.154 0.295 -0.06"/>
+<<<<<<< HEAD
+			<parent link="base_link"/>
+=======
+			<parent link="base"/>
+>>>>>>> df5380680304370108603d6ac00163c245728048
+			<child link= "leg_01"/>
+		</joint>
+	<link name="leg_01">
+		<visual>
+			<origin rpy= "1.5707 0 0" xyz= "-0.40 0.6 -0.08"/>
+			<geometry>
+<<<<<<< HEAD
+				<mesh filename="package://auto_bot/meshes/upper link left.stl" scale ="1 1 1"/>
+=======
+				<mesh filename="package://autobot/meshes/upper link left.stl" scale ="1 1 1"/>
+>>>>>>> df5380680304370108603d6ac00163c245728048
+			</geometry>
+								<material name="gold"/>
+					
+				
+			</visual>
+			<inertial>
+				<mass value="1"/>
+				<origin rpy="1.5707 0 0" xyz="0 0 0"/>
+				<inertia ixx="1" ixy="1" ixz="1" iyy="1" iyz="1" izz="1"/>
+			</inertial>
+		</link>
+		<joint name="knee_joint" type="revolute">
+			<axis xyz="1 0 0"/>
+			<limit effort ="1000.0" upper="3.14" lower="-3.14" velocity="0.5"/>
+			<origin rpy="0 0 0" xyz= "0.067 0.167 -0.2"/>
+			<parent link="leg_01"/>
+			<child link= "leg_02"/>
+		</joint>
+		<link name="leg_02">
+		<visual>
+			<origin rpy= "1.5 0 0" xyz= ""/>
+			<geometry>
+
+				<mesh filename="package://auto_bot/meshes/lower link left.stl" scale ="1 1 1"/>
+=======
+				<mesh filename="package://autobot/meshes/lower link left.stl" scale ="1 1 1"/>
+
+			</geometry>
+								<material name="gold"/>
+					
+				
+			</visual>
+			<inertial>
+				<mass value="1"/>
+				<origin rpy="1.57070 0 0" xyz="0 0 0"/>
+				<inertia ixx="1" ixy="1" ixz="1" iyy="1" iyz="1" izz="1"/>
+			</inertial>
+		</link>
+
+</robot>
+=======
+>>>>>>> df5380680304370108603d6ac00163c245728048

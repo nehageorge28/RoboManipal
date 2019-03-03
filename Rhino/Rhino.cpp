@@ -18,7 +18,7 @@ speed.concat("\r");
 _serial->write(speed);
 }
 
-		void Rhino::gotoPos(int pos1)
+		void Rhino::gotoPos(long pos1)
 	{
 		
 		pos1=(int)pos1;
